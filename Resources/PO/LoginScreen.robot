@@ -4,8 +4,8 @@ Library  SeleniumLibrary
 
 *** Variables ***
 ${loginLink} =  xpath=//a[@title='Jobseeker Login']
-${inputEmail} =  xpath=//div[@class='drawer-wrapper']//div[@class='form-row'][1]/input[@type='text']
-${inputPwd} =   xpath=//div[@class='drawer-wrapper']//div[@class='form-row'][2]/input[@type='password']
+${inputEmail} =  xpath=//input[@placeholder='Enter your active Email ID / Username']
+${inputPwd} =   xpath=//input[@placeholder='Enter your password']
 ${loginBtn} =   xpath=//button[@class='btn-primary loginButton']
 
 *** Keywords ***
@@ -24,12 +24,12 @@ Click Login Link
 
 Enter User "Email"
     [Arguments]  @{loginCreds}
-    input text  ${inputEmail}  @{loginCreds}[0]
+    input text  ${inputEmail}  ${loginCreds}[0]
     set browser implicit wait  1s
 
 Enter User "Password"
     [Arguments]  @{loginCreds}
-    input password  ${inputPwd}  @{loginCreds}[1]
+    input password  ${inputPwd}  ${loginCreds}[1]
     set browser implicit wait  1s
 
 Click "Login" Button
