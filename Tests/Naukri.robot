@@ -12,7 +12,7 @@ Test Teardown  End Web Test
 
 *** Test Cases ***
 
-User should be able to upload resume successfully
+User Should Be Able To Upload Resume Successfully
     #Passing the variable to the lower level
     [Documentation]  This is test 1 success scenario
     [Tags]  Test1
@@ -20,7 +20,7 @@ User should be able to upload resume successfully
     ResumeUpload.Upload Resume
 
 
-User should be able to Logout successfully
+User Should Be Able To Logout Successfully After Uploading Resume
     #Passing the variable to the lower level
     [Documentation]  This is test 2 success scenario with logout verification
     [Tags]  Test2

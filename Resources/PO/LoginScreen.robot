@@ -25,7 +25,7 @@ Click Login Link
 Enter User "Email"
     [Arguments]  @{loginCreds}
     input text  ${inputEmail}  ${loginCreds}[0]
-    set browser implicit wait  1s
+    sleep    1s
 
 Enter User "Password"
     [Arguments]  @{loginCreds}
