@@ -9,9 +9,10 @@ ${updateDate} =  xpath=//span[@class='updateOn']
 
 *** Keywords ***
 Update Resume
+    wait until element is visible    ${updateDate}     8 seconds
+    scroll element into view    ${uploadButton}
     choose file  ${uploadButton}    ${file}
-    sleep  2s
+    set selenium implicit wait    2 seconds
     ${uploadDate} =   get text  ${updateDate}
     log to console  ${uploadDate}
-
-    set selenium implicit wait  2s
+    sleep    2 seconds

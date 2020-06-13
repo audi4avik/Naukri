@@ -9,7 +9,7 @@ ${editProfileLink} =    xpath=//a[@title='Edit Profile']
 
 *** Keywords ***
 Select Edit Profile
-    wait until element is visible    ${profileName}
+    wait until element is visible    ${profileName}    8 seconds
     element text should be   ${profileName}   Avik Datta
     mouse over  ${mousehoverLink}
     click element   ${editProfileLink}
