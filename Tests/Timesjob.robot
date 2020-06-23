@@ -6,7 +6,7 @@ Resource  ../Resources/TimesjobUpload.robot  # necessary for lower level keyword
 Test Setup  Begin Web Test
 Test Teardown  End Web Test
 
-# robot -d Results -i Test1 Tests\Timesjob.robot
+# robot -d Results -i Times Tests\Timesjob.robot
 
 *** Test Cases ***
 User Should Be Able To Upload Resume Successfully
