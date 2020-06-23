@@ -12,7 +12,7 @@ Update Profile
     wait until element is visible    ${updateProfileLink}
 
     ${denyButtonStatus} =    run keyword and return status    ${denyNotification}    is visible
-    run keyword if    ${denyButtonStatus} = True  Deny and Continue
+    run keyword if    ${denyButtonStatus} == True  Deny and Continue
     ...    ELSE                                   Continue
 
 Deny and Continue
