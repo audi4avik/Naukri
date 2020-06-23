@@ -8,6 +8,7 @@ ${denyNotification} =    xpath=//a[@id='notify-visitors-confirm-popup-btn-negati
 
 *** Keywords ***
 Update Profile
+    set selenium timeout    10 seconds
     wait until element is visible    ${updateProfileLink}
     click element    ${denyNotification}
     click element    ${updateProfileLink}
